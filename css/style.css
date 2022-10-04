@@ -1,67 +1,164 @@
+:root {
+	--bg-color: hsl(49 37% 94%);
+	--typewriterSpeed: 6s;
+	--typewriterCharacters: 24;
+}
+
 body {
-    text-align: center;
-    display: block;
-    padding-top: 200px;
+	text-align: center;
+	display: block;
+	padding-top: 200px;
 }
 
 .sos {
-    color: red;
+	color: red;
 }
 
 .btn .btn1 {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .btn1 {
-    color: black;
+	color: black;
 }
 
 .btn1:hover {
-    color: white;
+	color: white;
 }
 
 /* Trang 2 */
 
-.body2{
-	background:#222;
-	text-align:center;
-	font-size:180%;
-	margin:2em;
+.body2 {
+	background: #222;
+	text-align: center;
+	font-size: 180%;
+	margin: 2em;
 	font-family: Calibri, arial, sans-serif;
 }
 
 .txt2 {
-    color: red;
+	color: red;
 }
 
-.to-top{
-	color:white;
-	padding-top:1.8em;
-	display:inline-block;/* or block */
-	position:relative;
-	border-color:white;
-	text-decoration:none;
-	transition:all .3s ease-out;
+.to-top {
+	color: white;
+	padding-top: 1.8em;
+	display: inline-block;
+	/* or block */
+	position: relative;
+	border-color: white;
+	text-decoration: none;
+	transition: all .3s ease-out;
 }
-.to-top:before{
-	content:'▲';
-	font-size:.9em;
-	position:absolute;
-	top:0;
-	left:50%;
-	margin-left:-.7em;
-	border:solid .13em white;
-	border-radius:10em;
-	width:1.4em;
-	height:1.4em;
-	line-height:1.3em;
-	border-color:inherit;
-	transition:transform .5s ease-in;
+
+.to-top:before {
+	content: '▲';
+	font-size: .9em;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -.7em;
+	border: solid .13em white;
+	border-radius: 10em;
+	width: 1.4em;
+	height: 1.4em;
+	line-height: 1.3em;
+	border-color: inherit;
+	transition: transform .5s ease-in;
 }
-.to-top:hover{
-	color:pink;
-	border-color:pink;
+
+.to-top:hover {
+	color: pink;
+	border-color: pink;
 }
-.to-top:hover:before{
+
+.to-top:hover:before {
 	transform: rotate(360deg);
+}
+
+/* Trang 3 */
+
+.body3 {
+	margin: 0;
+	font-family: "Source Sans Pro", sans-serif;
+	min-height: 50vh;
+	display: grid;
+	place-content: center;
+	text-align: center;
+	background: var(--bg-color);
+}
+
+.body3 h1 {
+	font-size: clamp(1rem, 3vw + 1rem, 4rem);
+	position: relative;
+	font-family: "Source Code Pro", monospace;
+	position: relative;
+	width: max-content;
+}
+
+.body3 h1::before, .body3 h1::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.body3 h1::before {
+	background: var(--bg-color);
+	animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+.body3 h1::after {
+	width: 0.125em;
+	background: black;
+	animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards,
+		blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+
+.body3 .subtitle {
+	color: hsl(0 0% 0% / 0.7);
+	font-size: 2rem;
+	font-weight: 400;
+	opacity: 0;
+	transform: translateY(3rem);
+	animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+	padding-top: 20px;
+}
+
+@keyframes typewriter {
+	to {
+		left: 100%;
+	}
+}
+
+@keyframes blink {
+	to {
+		background: transparent;
+	}
+}
+
+@keyframes fadeInUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Trang 4 */
+.body4 {
+	animation: transisionPage 1s;
+}
+
+@keyframes transisionPage {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
