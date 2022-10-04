@@ -16,11 +16,40 @@
 <body class="body4">
     <h1>Hôm nay là một ngày đặc biệt, hãy đón chờ những điều bất ngờ của anh em SC nha</h1>
     <!-- Thêm hiệu ứng text mất dần và pháo hoa -->
+    <div class="scene">
+        <div class="rocket">
+
+            <img src="image/rocket.png" alt="">
+        </div>
+    </div>
 </body>
 
 <footer>
     <link rel="stylesheet" href="js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="js/bootstrap.min.js">
+    <script>
+        function starts(){
+            let count = 50;
+            let scene = document.querySelector('.scene');
+            let i=0;
+            while(i < count){
+                let star = document.createElement('i');
+                let x = Math.floor(Math.random() * window.innerWidth);
+
+                let duration = Math.random() * 1;
+                let h = Math.random() * 100;
+
+                star.style.left = x + 'px';
+                star.style.width = 1 + 'px';
+                star.style.height = h + 'px';
+                star.style.animationDuration = duration + 's';
+
+                scene.appendChild(star);
+                i++
+            }
+        }
+        starts();
+    </script>
 </footer>
 
 </html>
