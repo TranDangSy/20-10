@@ -14,22 +14,113 @@ body {
 	text-align: center;
 	display: block;
 	padding-top: 200px;
+	background-image: url(/image/Cover\ không\ back.png);
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-size: cover;
 }
 
-.sos {
-	color: red;
+.img-flower {
+	/* height: 272px;
+	width: 250px; */
+	height: 163px;
+	width: 150px;
+	position: relative;
+	float: left;
+	animation-name: moveFlower, flowerFly;
+	animation-duration: 7s;
+	animation-timing-function: linear;
+	animation-delay: 1.2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
-.btn .btn1 {
-	text-decoration: none;
+@keyframes flowerFly {
+	0% {
+		top: 0px;
+		width: 150px;
+		height: 163px;
+	}
+
+	14% {
+		top: 0px;
+		width: 250px;
+		height: 272px;
+	}
+
+	28% {
+		top: 0px;
+		width: 150px;
+		height: 163px;
+	}
+
+	42% {
+		top: 0px;
+		width: 250px;
+		height: 272px;
+	}
+
+	56% {
+		top: 0px;
+		width: 150px;
+		height: 163px;
+	}
+
+	70% {
+		top: 0px;
+		width: 250px;
+		height: 272px;
+	}
+
+	84% {
+		top: 0px;
+		width: 150px;
+		height: 163px;
+	}
+
+	100% {
+		top: 200px;
+		width: 250px;
+		height: 272px;
+	}
 }
 
-.btn1 {
-	color: black;
+@keyframes moveFlower {
+	0% {
+		transform: translate(0px, 50px);
+	}
+
+	14% {
+		transform: translate(50px, 100px);
+	}
+
+	28% {
+		transform: translate(200px, 200px);
+	}
+
+	42% {
+		transform: translate(400px, -100px);
+	}
+
+	56% {
+		transform: translate(700px, 250px);
+	}
+
+	70% {
+		transform: translate(1000px, -100px);
+	}
+
+	84% {
+		transform: translate(1200px, 250px);
+	}
+
+	100% {
+		transform: translate(1500px, -100px);
+	}
 }
 
-.btn1:hover {
-	color: white;
+.img-flower:hover {
+	animation-play-state: paused;
 }
 
 /* Trang 2 */
