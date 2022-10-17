@@ -805,26 +805,26 @@
 	width: 100%;
 }
 
-.loader--active .loader__tile:nth-child(5) {
+.loader--active .loader__tile:nth-child(0) {
 	transition-delay: -0.2s;
 }
 
-.loader--active .loader__tile:nth-child(4) {
+.loader--active .loader__tile:nth-child(1) {
 	transition-delay: 0s;
 }
 
-.loader--active .loader__tile:nth-child(3) {
+.loader--active .loader__tile:nth-child(2) {
 	transition-delay: 0.2s;
 }
 
-.loader--active .loader__tile:nth-child(2) {
+.loader--active .loader__tile:nth-child(3) {
 	transition-delay: 0.4s;
 }
 
-.loader--active .loader__tile:nth-child(1) {
+.loader--active .loader__tile:nth-child(4) {
 	transition-delay: 0.6s;
 }
 
-.loader--active .loader__tile:nth-child(0) {
+.loader--active .loader__tile:nth-child(5) {
 	transition-delay: 0.8s;
 }
