@@ -39,8 +39,6 @@
 }
 
 .img-flower {
-	/* height: 272px;
-	width: 250px; */
 	height: 163px;
 	width: 150px;
 	position: relative;
@@ -482,7 +480,7 @@
 .box-body .img {
 	opacity: 0;
 	transform: translateY(0%);
-	transition: all 0.5s;
+	transition: all 3s;
 	margin: 0 auto;
 	display: block;
 }
