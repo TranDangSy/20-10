@@ -294,6 +294,7 @@
 	font-family: "Source Code Pro", monospace;
 	position: relative;
 	width: max-content;
+	word-break: break-all;
 }
 
 .body3 h1::before, .body3 h1::after {
