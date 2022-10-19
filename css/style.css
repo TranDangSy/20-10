@@ -368,8 +368,8 @@
 
 .box::before {
 	content: "";
-	width: 440px;
-	height: 440px;
+	width: 200px;
+	height: 200px;
 	position: absolute;
 	z-index: -1;
 	top: 50%;
@@ -402,7 +402,7 @@
 .box-body {
 	cursor: pointer;
 	-webkit-animation: box-body 2s forwards ease-in-out;
-	animation: box-body 3s forwards ease-in-out;
+	animation: box-body 3.5s forwards ease-in-out;
 }
 
 .box-body .img {
@@ -912,7 +912,7 @@ p {
 .birthdayCard:hover {
 	transform: perspective(2500px) rotate(5deg);
 	box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5);
-	left: 80px;
+	left: 70px;
 }
 
 .birthdayCard:hover .cardFront {

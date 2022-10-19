@@ -6,38 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOS</title>
+
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 
 <body class="body1">
-    <div class="loader loader--active">
-        <div class="loader__tile"></div>
-        <div class="loader__tile"></div>
-        <div class="loader__tile"></div>
-        <div class="loader__tile"></div>
-        <div class="loader__tile"></div>
+    <!-- loader -->
+    <div class="container" id="container">
+        <div class="row">
+            <div class="col-12 mt-5 d-flex justify-content-center">
+                <div class="box">
+                    <div class="box-body">
+                        <img class="img" src="image/meme.png">
+                        <div class="box-lid">
+
+                            <div class="box-bowtie"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="wrapper">
-        <h1 class="">
-            Ấn vào bông hoa đặc biệt nhất để khắc phục sự cố nhé nàng!
-        </h1>
-        <a href="trang2.html">
-            <img class="img-flower" src="/image/Bông hoa.png" alt="">
-        </a>
-    </div>
+    <!-- end loader -->
 </body>
 
 <footer>
-    <link rel="stylesheet" href="js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="js/bootstrap.bundle.js">
     <link rel="stylesheet" href="js/bootstrap.min.js">
-    <script src="js/main.js"></script>
+    <script>
+        var timer = setTimeout(function () {
+            window.location = '/trang2.html'
+        }, 6000);
+    </script>
 </footer>
 
 </html>
