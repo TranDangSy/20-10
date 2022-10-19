@@ -4,6 +4,7 @@
 	--typewriterCharacters: 24;
 }
 
+/* Font header */
 @font-face {
 	font-family: Font_Futura;
 	src: url(/fonts/Font_Futura/SFUFuturaHeavyOblique.TTF);
@@ -13,7 +14,6 @@
 	font-family: Untold_Story;
 	src: url(/fonts/The_Untold_Story.otf);
 }
-
 
 * {
 	margin: 0;
@@ -31,7 +31,6 @@
 	background-size: cover;
 	font-family: Font_Futura;
 }
-
 
 .body1 {
 	animation: transisionPage 1s;
@@ -164,6 +163,7 @@
 }
 
 .body2 h1 {
+	font-family: Font_Futura;
 	position: absolute;
 	top: 40%;
 	width: 100%;
@@ -509,7 +509,7 @@
 	margin: 0 auto;
 	display: block;
 	animation: boxTransition;
-	animation-duration: 4s;
+	animation-duration: 6s;
 }
 
 @keyframes boxTransition {
@@ -784,37 +784,38 @@
 	width: 0;
 	height: 20%;
 	background-color: #FFB63A;
+	/* background-color: linear-gradient(#FFB63A, #0ee340); */
 	transition: width 0.5s ease;
 }
 
 .loader .loader__tile:nth-child(0) {
 	top: calc(-1 * 20%);
-	transition-delay: -0.2s;
+	transition-delay: -0.3s;
 }
 
 .loader .loader__tile:nth-child(1) {
 	top: calc(0 * 20%);
-	transition-delay: 0s;
+	transition-delay: 0.1s;
 }
 
 .loader .loader__tile:nth-child(2) {
 	top: calc(1 * 20%);
-	transition-delay: 0.2s;
+	transition-delay: 0.3s;
 }
 
 .loader .loader__tile:nth-child(3) {
 	top: calc(2 * 20%);
-	transition-delay: 0.4s;
+	transition-delay: 0.5s;
 }
 
 .loader .loader__tile:nth-child(4) {
 	top: calc(3 * 20%);
-	transition-delay: 0.6s;
+	transition-delay: 0.7s;
 }
 
 .loader .loader__tile:nth-child(5) {
 	top: calc(4 * 20%);
-	transition-delay: 0.8s;
+	transition-delay: 0.9s;
 }
 
 .loader--active {
@@ -1008,7 +1009,7 @@ p {
 .birthdayCard:hover {
 	transform: perspective(2500px) rotate(5deg);
 	box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5);
-	left: 100px;
+	left: 80px;
 }
 
 .birthdayCard:hover .cardFront {
