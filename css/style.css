@@ -11,14 +11,18 @@
 }
 
 @font-face {
-	font-family: Untold_Story;
-	src: url(/fonts/The_Untold_Story.otf);
+	font-family: Lato_Italic;
+	src: url(/fonts/Lato_Italic.ttf);
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+.body_index {
+	animation: transisionIndex 2s;
 }
 
 .body_index, .body1 {
@@ -354,107 +358,6 @@
 		opacity: 1;
 		transform: translateY(0);
 	}
-}
-
-/* Trang 4 */
-
-.body4 {
-	animation: transisionPage 1s;
-}
-
-@keyframes transisionPage {
-	from {
-		opacity: 0;
-		transform: translateY(-10px);
-	}
-
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-.rocket {
-	position: absolute;
-	width: 300px;
-	height: 300px;
-	right: 10px;
-	transform: rotate(90deg);
-}
-
-@media screen {
-	@keyframes move {
-		from {
-			left: 0px;
-		}
-
-		to {
-			left: 1600px;
-		}
-	}
-
-	.rocket {
-		animation-name: move;
-		animation-duration: 8s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-	}
-}
-
-.scene {
-	position: relative;
-	width: 100%;
-	height: 70vh;
-	background: #01070a;
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-
-.scene i {
-	position: absolute;
-	top: -50px;
-	background: rgba(255, 255, 255, 0.5);
-	animation: animateStars linear infinite;
-}
-
-/* .scene .rocket {
-	position: relative;
-	animation: animate 0.2s ease infinite;
-} */
-
-@keyframes animateStars {
-	0%, 100% {
-		transform: translateY(0);
-	}
-
-	50% {
-		transform: translateY(200vh);
-	}
-}
-
-@keyframes animate {
-	0%, 100% {
-		transform: translateY(-2px);
-	}
-
-	50% {
-		transform: translateY(2px);
-	}
-}
-
-.scene .rocket::before {
-	content: '';
-	position: absolute;
-	bottom: -200px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 10px;
-	height: 200px;
-	background: linear-gradient(#00d0ff, transparent);
-	filter: blur(20);
 }
 
 /* Loader */
@@ -992,7 +895,7 @@
 }
 
 p {
-	font-family: Untold_Story;
+	font-family: Lato_Italic;
 	margin: 40px;
 	color: #333;
 }
@@ -1021,3 +924,86 @@ p {
 }
 
 /* End card */
+
+.body_heart {
+	text-align: center;
+	background-color: #eccfcf;
+	padding-top: 300px;
+}
+
+@keyframes transisionIndex {
+	from {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(100px);
+	}
+}
+
+.lds-heart {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+	transform: rotate(45deg);
+	transform-origin: 40px 40px;
+}
+
+.lds-heart div {
+	background: linear-gradient(to left, #8237a3, #d9156f, #ed5824, #c39f00, #53d62f);
+	top: 32px;
+	left: 32px;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.lds-heart div:after,
+.lds-heart div:before {
+	content: " ";
+	position: absolute;
+	display: block;
+	width: 64px;
+	height: 64px;
+	background: linear-gradient(to left, #8237a3, #d9156f, #ed5824, #c39f00, #53d62f);
+}
+
+.lds-heart div:before {
+	left: -24px;
+	border-radius: 50% 0 0 50%;
+}
+
+.lds-heart div:after {
+	top: -24px;
+	border-radius: 50% 50% 0 0;
+}
+
+@keyframes lds-heart {
+	0% {
+		transform: scale(0.95);
+	}
+
+	5% {
+		transform: scale(1.1);
+	}
+
+	39% {
+		transform: scale(0.85);
+	}
+
+	45% {
+		transform: scale(1);
+	}
+
+	60% {
+		transform: scale(0.95);
+	}
+
+	100% {
+		transform: scale(0.9);
+	}
+}
