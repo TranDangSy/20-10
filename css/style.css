@@ -23,11 +23,11 @@
 
 .body_index, .body1 {
 	text-align: center;
-	display: block;
+	/* display: block; */
 	padding-top: 200px;
-	background-image: url(/image/Cover.png);
+	background-image: url(/image/cover3.png);
 	background-repeat: no-repeat;
-	background-position: 50% 0;
+	background-position: 100% 0;
 	background-size: cover;
 	font-family: Font_Futura;
 }
